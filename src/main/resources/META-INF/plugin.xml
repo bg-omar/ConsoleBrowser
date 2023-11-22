@@ -1,0 +1,56 @@
+<idea-plugin>
+    <id>com.github.bgomar.consolebrowser</id>
+    <name>ConsoleBrowser</name>
+    <vendor email="info@omariskandarani.com" url="https://github.com/bg-omar/consolebrowser">bgOmar</vendor>
+
+    <description><![CDATA[
+    Embed localhost in a ToolWindow.<br>
+    Test your Angular build in the IDE<br>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <idea-version since-build="223.7571.182" />
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>JavaScript</depends>
+
+
+    <resource-bundle>messages.ConsoleBrowserBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+
+<!--        <projectService serviceImplementation="com.github.bgomar.consolebrowser.GivToolWindowFactory"/>-->
+
+        <applicationService serviceImplementation="com.github.bgomar.consolebrowser.services.GivServiceSettings"/>
+<!--        <applicationService serviceImplementation="com.github.bgomar.consolebrowser.settings.ConsoleBrowserSettings"/>-->
+        <projectConfigurable parentId="tools" instance="com.github.bgomar.consolebrowser.settings.ProjectSettingsConfigurable"
+                             id="com.github.bgomar.consolebrowser.settings.ProjectSettingsConfigurable"
+                             displayName="ConsoleBrowser"
+        />
+        <!--<notificationGroup id="com.github.bgomar.consolebrowser" displayType="STICKY_BALLOON"/>-->
+        <toolWindow id="ConsoleBrowser" icon="/icons/ConsoleBrowser.svg" anchor="right"
+                    factoryClass="com.github.bgomar.consolebrowser.GivToolWindowFactory"/>
+<!--        <postStartupActivity implementation="com.github.bgomar.consolebrowser.UpdateNotify"/>-->
+
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+
+
+
+
+    </extensions>
+
+
+
+    <actions>
+        <!-- Add your actions here -->
+
+
+    </actions>
+
+</idea-plugin>
+
