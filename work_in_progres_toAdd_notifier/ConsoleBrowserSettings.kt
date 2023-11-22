@@ -15,7 +15,7 @@ class ConsoleBrowserSettings : PersistentStateComponent<ConsoleBrowserSettings> 
 
 
 
-  var version = System.getenv("CONSOLEBROWSER_VERSION")
+  var version = "0.0.4"
 
   companion object {
     val instance: ConsoleBrowserSettings

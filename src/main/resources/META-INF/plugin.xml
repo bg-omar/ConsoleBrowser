@@ -30,7 +30,7 @@
                              displayName="ConsoleBrowser"
         />
         <!--<notificationGroup id="com.github.bgomar.consolebrowser" displayType="STICKY_BALLOON"/>-->
-        <toolWindow id="ConsoleBrowser" icon="/icons/ConsoleBrowser.svg" anchor="right"
+        <toolWindow id="ConsoleBrowser" icon="/icons/BG.svg" anchor="right"
                     factoryClass="com.github.bgomar.consolebrowser.GivToolWindowFactory"/>
 <!--        <postStartupActivity implementation="com.github.bgomar.consolebrowser.UpdateNotify"/>-->
 
